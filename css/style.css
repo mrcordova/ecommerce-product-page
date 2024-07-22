@@ -107,6 +107,30 @@ path {
   margin-inline-start: auto;
   margin-block: auto;
 }
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  padding-block-start: 0.7rem;
+  gap: 1.1rem;
+}
+.price {
+  font-size: 1.85rem;
+}
+.discount {
+  color: var(--White);
+  background-color: var(--Very-dark-blue);
+  padding-inline: 0.6rem;
+  padding-block: 0.1rem;
+  border-radius: 0.3rem;
+}
+.original-price {
+  margin-inline-start: auto;
+  align-self: center;
+  text-decoration-line: line-through;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.05rem;
+}
 .product-desc-container {
   display: flex;
   flex-direction: column;
