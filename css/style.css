@@ -26,6 +26,7 @@
   --Black: hsl(0, 0%, 0%);
   /* (with 75% opacity for lightbox background) */
 }
+
 body {
   min-height: 100svh;
   min-height: 100vh;
@@ -89,7 +90,7 @@ main {
 }
 .item-para {
   grid-row: 3;
-  display: inline-block;
+  /* display: inline-block; */
   grid-column: 1 / span 2;
   color: var(--Dark-grayish-blue);
   font-size: 0.95rem;
@@ -172,6 +173,15 @@ path {
 .quantity {
   grid-row: 5;
   grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--Light-grayish-blue);
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+  margin-block-start: 1rem;
 }
 @media (min-width: 30rem) {
   .desktop-nav {
