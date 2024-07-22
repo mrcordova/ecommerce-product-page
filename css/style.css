@@ -112,10 +112,11 @@ path {
   display: flex;
   align-items: baseline;
   padding-block-start: 0.7rem;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 .price {
   font-size: 1.85rem;
+  letter-spacing: 0.03rem;
 }
 .discount {
   color: var(--White);
