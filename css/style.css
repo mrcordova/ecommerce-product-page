@@ -1,3 +1,16 @@
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  /* (with 75% opacity for lightbox background) */
+}
+
 body {
   min-height: 100svh;
   min-height: 100vh;
@@ -10,6 +23,12 @@ header {
   gap: 0.9rem;
   padding-inline: 1.5rem;
 }
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .cart {
   margin-inline-start: auto;
   margin-inline-end: 0.5rem;
@@ -20,11 +39,46 @@ header {
 #mobile-popover::backdrop {
   /* background-color: hsl(from black h s l / 0.5); */
 }
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  border-radius: 50%;
+  width: 2.4rem;
+  aspect-ratio: 1;
+  background-color: var(--White);
+}
+:is(.left-arrow, .right-arrow) > img {
+  margin: auto;
+}
+.left-arrow {
+  left: 1rem;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-inline-end: auto;
+  margin-block: auto;
+}
+.right-arrow {
+  left: 0;
+  right: 1rem;
+  bottom: 0;
+  top: 0;
 
+  margin-inline-start: auto;
+  margin-block: auto;
+}
 .profile-img-container {
   width: 1.5rem;
 }
-.profile-img-container > img {
+.product-img-container {
+  position: relative;
+  /* flex: 1; */
+}
+.product-img-container > img {
+  /* object-fit: contain; */
+}
+.product-desc-container {
+  flex: 1;
 }
 @media (min-width: 30rem) {
   .desktop-nav {
