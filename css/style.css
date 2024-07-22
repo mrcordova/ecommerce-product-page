@@ -31,6 +31,7 @@ body {
   min-height: 100svh;
   min-height: 100vh;
   display: grid;
+  grid-template-rows: max-content;
 }
 
 header {
@@ -38,6 +39,8 @@ header {
   align-items: center;
   gap: 0.9rem;
   padding-inline: 1.5rem;
+  height: max-content;
+  padding-block: 1.35rem;
 }
 
 main {
