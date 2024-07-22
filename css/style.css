@@ -1,0 +1,21 @@
+body {
+  min-height: 100svh;
+  min-height: 100vh;
+  display: grid;
+}
+
+.desktop-nav {
+  display: none;
+}
+#mobile-popover::backdrop {
+  /* background-color: hsl(from black h s l / 0.5); */
+}
+@media (min-width: 30rem) {
+  .desktop-nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
