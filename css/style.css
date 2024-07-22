@@ -4,11 +4,27 @@ body {
   display: grid;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-inline: 1.5rem;
+}
+.cart {
+  margin-inline-start: auto;
+  margin-inline-end: 0.5rem;
+}
 .desktop-nav {
   display: none;
 }
 #mobile-popover::backdrop {
   /* background-color: hsl(from black h s l / 0.5); */
+}
+
+.profile-img-container {
+  width: 1.5rem;
+}
+.profile-img-container > img {
 }
 @media (min-width: 30rem) {
   .desktop-nav {
