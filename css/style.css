@@ -76,6 +76,9 @@ main {
 }
 .product-img-container > img {
   /* object-fit: contain; */
+  height: 18.8rem;
+  width: 100%;
+  object-fit: cover;
 }
 .product-desc-container {
   flex: 1;
