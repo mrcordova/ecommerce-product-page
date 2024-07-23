@@ -157,6 +157,47 @@ menu > li {
   padding: 1.2rem;
   border-bottom: 1px solid var(--Grayish-blue);
 }
+.cart-menu-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  & > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  & > ul > li > .thumbnail {
+    width: 3rem;
+    border-radius: 0.2rem;
+  }
+
+  & > ul > li > div {
+    /* margin-inline-end: auto; */
+  }
+  & > ul > li > .delete-btn:hover {
+    cursor: pointer;
+  }
+}
+.checkout-btn {
+  text-align: center;
+  background-color: var(--Orange);
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.cart-item-title {
+  font-size: 1rem;
+  color: var(--Dark-grayish-blue);
+}
 #mobile-popover {
   /* position: absolute; */
   border: 0;

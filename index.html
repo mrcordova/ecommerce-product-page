@@ -103,22 +103,35 @@
         <div class="cart-menu-empty kumbh-sans-700 hide">
           <p>Your cart is empty</p>
         </div>
-        <div class="cart-menu-list-container">
+        <div class="cart-menu-list-container kumbh-sans-400">
           <ul>
             <li>
-              <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" />
+              <img
+                class="thumbnail"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="shoes" />
               <div>
-                <p>Fall Limited Edition Sneakers</p>
+                <p class="cart-item-title kumbh-sans-700">
+                  Fall Limited Edition Sneakers
+                </p>
                 <p>
                   <span>$125.00</span>
                   <span>x 3</span>
-                  <span>$375.00</span>
+                  <span class="kumbh-sans-700">$375.00</span>
                 </p>
               </div>
-              <img src="./images/icon-delete.svg" alt="trash can" />
+              <button class="delete-btn">
+                <img
+                  class="delete"
+                  src="./images/icon-delete.svg"
+                  alt="trash can" />
+              </button>
             </li>
           </ul>
-          <button popovertarget="cart-menu" popovertargetaction="hide">
+          <button
+            class="checkout-btn kumbh-sans-700"
+            popovertarget="cart-menu"
+            popovertargetaction="hide">
             Checkout
           </button>
         </div>
