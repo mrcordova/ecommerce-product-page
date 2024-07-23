@@ -91,9 +91,14 @@ main {
   width: 2.45rem;
   aspect-ratio: 1;
   background-color: var(--White);
+  z-index: 5;
 }
 :is(.left-arrow, .right-arrow) > svg {
   margin: auto;
+}
+
+:is(.left-arrow, .right-arrow):hover {
+  cursor: pointer;
 }
 
 .item-name {
@@ -171,13 +176,32 @@ main {
   width: 1.5rem;
 }
 .product-img-container {
+  display: grid;
   position: relative;
 }
 .product-img-container > img {
   height: 18.8rem;
   width: 100%;
   object-fit: cover;
+  /* grid-row: 1;
+  grid-column: 1; */
 }
+.slides {
+  display: none;
+  transition: all 1s ease;
+}
+/* #product-1 {
+  z-index: 4;
+}
+#product-2 {
+  z-index: 3;
+}
+#product-3 {
+  z-index: 2;
+}
+#product-4 {
+  z-index: 1;
+} */
 .product-desc-container {
   /* flex: 1; */
   display: grid;
