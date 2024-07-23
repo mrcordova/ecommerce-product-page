@@ -1,5 +1,7 @@
 let slideIndex = 1;
 const arrows = document.querySelectorAll(".left-arrow, .right-arrow");
+const counterBtns = document.querySelectorAll(".counter");
+const quantity = document.querySelector(".quantity-amount");
 
 showSlides(slideIndex);
 
@@ -32,6 +34,15 @@ function showSlides(n) {
   //   dots[slideIndex - 1].className += " active";
 }
 
+function updateCounter(e) {
+  const val = parseInt(e.currentTarget.getAttribute("data-value"));
+  quantity.textContent = `${Math.max(0, parseInt(quantity.textContent) + val)}`;
+}
+
 for (const arrow of arrows) {
   arrow.addEventListener("click", moveSlides);
+}
+
+for (const counterBtn of counterBtns) {
+  counterBtn.addEventListener("click", updateCounter);
 }

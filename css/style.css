@@ -61,6 +61,7 @@ menu > li {
   margin-inline-end: 0.5rem;
 }
 .cart-amount {
+  display: none;
   position: absolute;
   top: -0.5rem;
   /* bottom: 0; */
@@ -73,6 +74,7 @@ menu > li {
   text-align: center;
   font-size: 0.75rem;
   background-color: var(--Orange);
+  transition: 1s ease;
 }
 
 .cart-btn {
@@ -100,6 +102,15 @@ menu > li {
   font-size: 0.77rem;
   letter-spacing: 0.1rem;
   color: var(--Dark-grayish-blue);
+}
+
+.counter {
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+  }
 }
 .desktop-nav {
   display: none;
@@ -260,8 +271,8 @@ menu > li {
   justify-content: space-between;
 
   background-color: var(--Light-grayish-blue);
-  padding-inline: 1.5rem;
-  padding-block: 1rem;
+  /* padding-inline: 1.5rem; */
+  /* padding-block: 1rem; */
   border-radius: 0.5rem;
   margin-block-start: 1rem;
 }

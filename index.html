@@ -89,7 +89,7 @@
             fill="#69707D"
             fill-rule="nonzero" />
         </svg>
-        <span class="cart-amount kumbh-sans-700"></span>
+        <span class="cart-amount kumbh-sans-700">0</span>
       </button>
       <div class="profile-img-container">
         <img
@@ -154,9 +154,13 @@
         </div>
         <p class="original-price kumbh-sans-700">$250.00</p>
         <div class="quantity kumbh-sans-700">
-          <img src="./images/icon-minus.svg" alt="subtraction" />
-          0
-          <img src="./images/icon-plus.svg" alt="addition" />
+          <button class="counter" data-value="-1">
+            <img src="./images/icon-minus.svg" alt="subtraction" />
+          </button>
+          <p class="quantity-amount">0</p>
+          <button class="counter" data-value="1">
+            <img src="./images/icon-plus.svg" alt="addition" />
+          </button>
         </div>
         <button class="cart-btn kumbh-sans-700">
           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
