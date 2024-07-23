@@ -5,6 +5,10 @@ const quantity = document.querySelector(".quantity-amount");
 const addToCartBtn = document.querySelector(".cart-btn");
 const cartAmount = document.querySelector(".cart-amount");
 const showCart = document.querySelector(".cart");
+const cartMenuEmpty = document.querySelector(".cart-menu-empty");
+const cartMenuListContainer = document.querySelector(
+  ".cart-menu-list-container"
+);
 
 showSlides(slideIndex);
 
@@ -46,6 +50,8 @@ function addToCart(e) {
     parseInt(quantity.textContent) + parseInt(cartAmount.textContent);
 
   cartAmount.classList.toggle("hide", currentItemAmount == 0);
+  cartMenuEmpty.classList.toggle("hide", currentItemAmount != 0);
+  cartMenuListContainer.classList.toggle("hide", currentItemAmount == 0);
 
   cartAmount.textContent = `${currentItemAmount}`;
 }
