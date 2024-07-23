@@ -61,7 +61,7 @@ menu > li {
   margin-inline-end: 0.5rem;
 }
 .cart-amount {
-  display: none;
+  display: block;
   position: absolute;
   top: -0.5rem;
   /* bottom: 0; */
@@ -264,7 +264,7 @@ menu > li {
   object-fit: cover;
 }
 .slides {
-  display: none;
+  display: block;
   transition: 1s ease;
 }
 
@@ -286,6 +286,10 @@ menu > li {
   /* padding-block: 1rem; */
   border-radius: 0.5rem;
   margin-block-start: 1rem;
+}
+
+.hide {
+  display: none;
 }
 @media (min-width: 30rem) {
   .desktop-nav {
