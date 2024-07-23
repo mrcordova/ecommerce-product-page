@@ -92,10 +92,21 @@ menu > li {
 
   box-shadow: 0px 20px 20px 0px var(--Pale-orange);
   /* margin-inline: auto; */
+
+  &:hover {
+    cursor: pointer;
+    background-color: hsl(from var(--Orange) h s l / 0.5);
+    color: hsl(from var(--Black) h s l / 0.5);
+    /* filter: brightness(1.1); */
+  }
+  &:hover > svg > path {
+    fill: hsl(from var(--Black) h s l / 0.5);
+  }
 }
 .cart-btn > svg > path {
   fill: var(--Black);
 }
+
 .company-name {
   grid-row: 1;
   grid-column: 1 / span 2;
