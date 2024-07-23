@@ -4,6 +4,7 @@ const counterBtns = document.querySelectorAll(".counter");
 const quantity = document.querySelector(".quantity-amount");
 const addToCartBtn = document.querySelector(".cart-btn");
 const cartAmount = document.querySelector(".cart-amount");
+const showCart = document.querySelector(".cart");
 
 showSlides(slideIndex);
 

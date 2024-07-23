@@ -59,6 +59,9 @@ menu > li {
   position: relative;
   margin-inline-start: auto;
   margin-inline-end: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .cart-amount {
   display: block;
