@@ -9,6 +9,7 @@ const cartMenuEmpty = document.querySelector(".cart-menu-empty");
 const cartMenuListContainer = document.querySelector(
   ".cart-menu-list-container"
 );
+const cartList = document.querySelector(".cart-list");
 
 showSlides(slideIndex);
 
@@ -45,6 +46,58 @@ function updateCounter(e) {
   const val = parseInt(e.currentTarget.getAttribute("data-value"));
   quantity.textContent = `${Math.max(0, parseInt(quantity.textContent) + val)}`;
 }
+function createLiElement() {
+  const li = document.createElement("li");
+  cartList.appendChild(li);
+
+  const thumbnailImg = document.createElement("img");
+  thumbnailImg.setAttribute("class", "thumbnail");
+  thumbnailImg.setAttribute("src", "./images/image-product-1-thumbnail.jpg");
+  thumbnailImg.setAttribute("alt", "shoes");
+  li.appendChild(thumbnailImg);
+
+  const div = document.createElement("div");
+  li.appendChild(div);
+
+  const cardItemTitlePara = document.createElement("p");
+  cardItemTitlePara.setAttribute("class", "cart-item-title kumbh-sans-700");
+  cardItemTitlePara.insertAdjacentText(
+    "afterbegin",
+    "Fall Limited Edition Sneakers"
+  );
+  div.appendChild(cardItemTitlePara);
+
+  const para = document.createElement("p");
+  div.appendChild(para);
+
+  para.insertAdjacentHTML(
+    "beforeend",
+    '<span class="cart-item-price">$125.00 </span>'
+  );
+  para.insertAdjacentHTML(
+    "beforeend",
+    `<span class="cart-item-quantity">x ${quantity.textContent} </span>`
+  );
+  para.insertAdjacentHTML(
+    "beforeend",
+    `<span class="cart-item-total kumbh-sans-700">$${(
+      parseInt(quantity.textContent) * 125.0
+    ).toFixed(2)}</span>`
+  );
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.setAttribute("class", "delete-btn");
+
+  li.appendChild(deleteBtn);
+
+  const trashImg = document.createElement("img");
+  trashImg.setAttribute("class", "delete");
+  trashImg.setAttribute("src", "./images/icon-delete.svg");
+  trashImg.setAttribute("alt", "trash can");
+
+  deleteBtn.appendChild(trashImg);
+}
+
 function addToCart(e) {
   const currentItemAmount =
     parseInt(quantity.textContent) + parseInt(cartAmount.textContent);
@@ -54,6 +107,7 @@ function addToCart(e) {
   cartMenuListContainer.classList.toggle("hide", currentItemAmount == 0);
 
   cartAmount.textContent = `${currentItemAmount}`;
+  createLiElement();
 }
 for (const arrow of arrows) {
   arrow.addEventListener("click", moveSlides);
