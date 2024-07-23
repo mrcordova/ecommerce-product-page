@@ -44,6 +44,7 @@ header {
 }
 
 main {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -128,6 +129,33 @@ menu > li {
 }
 .desktop-nav {
   display: none;
+}
+
+#cart-menu {
+  /* position: absolute; */
+  top: 4.5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 22rem;
+  height: 18rem;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.cart-menu-empty {
+  color: var(--Dark-grayish-blue);
+  display: flex;
+  justify-content: center;
+  & > p {
+    margin-block: 5rem;
+    margin-inline: 5rem;
+  }
+}
+.cart-menu-title {
+  font-size: 1.3rem;
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--Grayish-blue);
 }
 #mobile-popover {
   /* position: absolute; */

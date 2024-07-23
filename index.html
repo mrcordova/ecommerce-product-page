@@ -99,24 +99,29 @@
     </header>
     <main>
       <div popover="manual" id="cart-menu">
-        <h2>Cart</h2>
-        <ul>
-          <li>
-            <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" />
-            <div>
-              <p>Fall Limited Edition Sneakers</p>
-              <p>
-                <span>$125.00</span>
-                <span>x 3</span>
-                <span>$375.00</span>
-              </p>
-            </div>
-            <img src="./images/icon-delete.svg" alt="trash can" />
-          </li>
-        </ul>
-        <button popovertarget="cart-menu" popovertargetaction="hide">
-          Checkout
-        </button>
+        <h2 class="cart-menu-title kumbh-sans-700">Cart</h2>
+        <div class="cart-menu-empty kumbh-sans-700 hide">
+          <p>Your cart is empty</p>
+        </div>
+        <div class="cart-menu-list-container">
+          <ul>
+            <li>
+              <img src="./images/image-product-1-thumbnail.jpg" alt="shoes" />
+              <div>
+                <p>Fall Limited Edition Sneakers</p>
+                <p>
+                  <span>$125.00</span>
+                  <span>x 3</span>
+                  <span>$375.00</span>
+                </p>
+              </div>
+              <img src="./images/icon-delete.svg" alt="trash can" />
+            </li>
+          </ul>
+          <button popovertarget="cart-menu" popovertargetaction="hide">
+            Checkout
+          </button>
+        </div>
       </div>
       <div class="product-img-container">
         <img
