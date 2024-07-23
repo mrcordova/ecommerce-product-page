@@ -56,9 +56,25 @@ menu > li {
   list-style: none;
 }
 .cart {
+  position: relative;
   margin-inline-start: auto;
   margin-inline-end: 0.5rem;
 }
+.cart-amount {
+  position: absolute;
+  top: -0.5rem;
+  /* bottom: 0; */
+  /* left: 0; */
+  right: -0.5rem;
+  width: 1.2rem;
+  height: 1rem;
+  border-radius: 0.4rem;
+  color: var(--White);
+  text-align: center;
+  font-size: 0.75rem;
+  background-color: var(--Orange);
+}
+
 .cart-btn {
   grid-row: 6;
   grid-column: 1 / span 2;
