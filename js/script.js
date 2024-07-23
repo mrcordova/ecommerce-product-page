@@ -88,6 +88,32 @@ function createLiElement() {
   const deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("class", "delete-btn");
 
+  deleteBtn.addEventListener(
+    "click",
+    (e) => {
+      const q = e.currentTarget.parentElement
+        .querySelector(".cart-item-quantity")
+        .textContent.slice(2);
+      cartAmount.textContent = `${
+        parseInt(cartAmount.textContent) + -parseInt(q)
+      }`;
+      cartAmount.classList.toggle(
+        "hide",
+        parseInt(cartAmount.textContent) == 0
+      );
+      cartMenuEmpty.classList.toggle(
+        "hide",
+        parseInt(cartAmount.textContent) != 0
+      );
+      cartMenuListContainer.classList.toggle(
+        "hide",
+        parseInt(cartAmount.textContent) == 0
+      );
+      e.currentTarget.parentElement.remove();
+    },
+    { once: true }
+  );
+
   li.appendChild(deleteBtn);
 
   const trashImg = document.createElement("img");
