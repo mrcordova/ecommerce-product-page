@@ -1,5 +1,8 @@
 let slideIndex = 1;
 const arrows = document.querySelectorAll(".left-arrow, .right-arrow");
+const lightboxArrows = document.querySelectorAll(
+  ".lightbox-left-arrow, .lightbox-right-arrow"
+);
 const counterBtns = document.querySelectorAll(".counter");
 const quantity = document.querySelector(".quantity-amount");
 const addToCartBtn = document.querySelector(".cart-btn");
@@ -26,8 +29,9 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("slides");
-  //   let dots = document.getElementsByClassName("dot");
+  let slides = document.querySelectorAll(".slides");
+  let lightslides = document.querySelectorAll(".lightslides");
+
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -36,12 +40,11 @@ function showSlides(n) {
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].classList.add("hide");
+    lightslides[i].classList.add("hide");
   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
+
   slides[slideIndex - 1].classList.toggle("hide", false);
-  //   dots[slideIndex - 1].className += " active";
+  lightslides[slideIndex - 1].classList.toggle("hide", false);
 }
 
 function updateCounter(e) {
@@ -139,7 +142,8 @@ function addToCart(e) {
 }
 
 function changeFocus(e) {
-  let slides = document.getElementsByClassName("slides");
+  let slides = document.querySelectorAll(".slides");
+  let lightslides = document.querySelectorAll(".lightslides");
   focusdImg.removeAttribute("id", "autofocus");
 
   slides[
@@ -149,12 +153,21 @@ function changeFocus(e) {
   slides[
     parseInt(e.currentTarget.children[0].getAttribute("data-value")) - 1
   ].classList.remove("hide");
+  lightslides[
+    parseInt(focusdImg.children[0].getAttribute("data-value")) - 1
+  ].classList.add("hide");
+  e.currentTarget.setAttribute("id", "autofocus");
+  lightslides[
+    parseInt(e.currentTarget.children[0].getAttribute("data-value")) - 1
+  ].classList.remove("hide");
   focusdImg = e.currentTarget;
 }
 for (const arrow of arrows) {
   arrow.addEventListener("click", moveSlides);
 }
-
+for (const lightboxArrow of lightboxArrows) {
+  lightboxArrow.addEventListener("click", moveSlides);
+}
 for (const counterBtn of counterBtns) {
   counterBtn.addEventListener("click", updateCounter);
 }
@@ -162,4 +175,5 @@ for (const counterBtn of counterBtns) {
 for (const thumbnailBtn of thumbnailBtns) {
   thumbnailBtn.addEventListener("click", changeFocus);
 }
+
 addToCartBtn.addEventListener("click", addToCart);

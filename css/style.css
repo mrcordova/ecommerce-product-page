@@ -194,6 +194,13 @@ menu > li {
 }
 .close-btn {
   align-self: flex-end;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover > svg > path {
+    fill: var(--Orange);
+  }
 }
 .close-btn > svg {
   transform: scale(1.5);
@@ -344,6 +351,9 @@ menu > li {
   width: 4rem;
   margin-inline-end: auto;
   margin-block: auto;
+  &:hover > svg > path {
+    stroke: var(--Orange);
+  }
 }
 .lightbox-right-arrow {
   width: 4rem;
@@ -354,6 +364,9 @@ menu > li {
 
   margin-inline-start: auto;
   margin-block: auto;
+  &:hover > svg > path {
+    stroke: var(--Orange);
+  }
 }
 #lightbox:popover-open {
   display: none;
