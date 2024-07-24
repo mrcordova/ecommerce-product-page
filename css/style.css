@@ -328,8 +328,12 @@ menu > li {
   padding-block-start: 0.7rem;
 }
 .product-desc-container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  gap: 0.4rem;
+  grid-template-rows: max-content;
+  grid-template-columns: min-content;
   padding-inline: 1.5rem;
   padding-block-start: 1.5rem;
 }
@@ -351,12 +355,6 @@ menu > li {
   transition: 1s ease;
 }
 
-.product-desc-container {
-  /* flex: 1; */
-  display: grid;
-  gap: 0.4rem;
-  grid-template-rows: max-content;
-}
 .quantity {
   grid-row: 5;
   grid-column: 1 / span 2;
@@ -399,6 +397,9 @@ menu > li {
     align-items: center;
   }
 
+  .price-container {
+    margin-inline-end: auto;
+  }
   .product-img-container {
     & > img {
       height: auto;
