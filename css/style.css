@@ -495,21 +495,33 @@ menu > li {
       /* line-height: 0%; */
     }
 
-    & button:is(:hover, :focus) > img {
+    & button:is(:hover) > img {
       cursor: pointer;
       opacity: 0.4;
       border-radius: 0;
     }
 
-    & button:is(:hover, :focus) {
+    & button:is(:hover) {
       all: unset;
       width: 5.125rem;
-      /* width: 4.8125rem; */
+
       border: 3px solid var(--Orange);
       border-radius: 0.7rem;
     }
   }
 
+  #autofocus {
+    all: unset;
+    width: 5.125rem;
+    height: auto;
+    border: 3px solid var(--Orange);
+    border-radius: 0.5rem;
+  }
+  #autofocus > img {
+    opacity: 0.4;
+    /* width: 5.125rem; */
+    border-radius: 0;
+  }
   .product-desc-container {
     align-content: center;
     align-items: center;
