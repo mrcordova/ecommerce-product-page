@@ -153,13 +153,7 @@ function changeFocus(e) {
   slides[
     parseInt(e.currentTarget.children[0].getAttribute("data-value")) - 1
   ].classList.remove("hide");
-  lightslides[
-    parseInt(focusdImg.children[0].getAttribute("data-value")) - 1
-  ].classList.add("hide");
-  e.currentTarget.setAttribute("id", "autofocus");
-  lightslides[
-    parseInt(e.currentTarget.children[0].getAttribute("data-value")) - 1
-  ].classList.remove("hide");
+
   focusdImg = e.currentTarget;
 }
 for (const arrow of arrows) {
