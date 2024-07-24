@@ -356,19 +356,17 @@ menu > li {
   margin-block: auto;
 }
 #lightbox:popover-open {
-  border: 0;
-  background-color: transparent;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  overflow: visible;
+  display: none;
 }
 #lightbox::backdrop {
   background-color: hsl(from black h s l / 0.75);
 }
 #lightbox .thumbnail-container {
   justify-content: center;
+
+  & > button {
+    background-color: var(--White);
+  }
 }
 #lightbox .product-img-container > img {
   height: 35rem;
@@ -478,6 +476,15 @@ menu > li {
   main {
     flex-direction: row;
     align-items: center;
+  }
+  #lightbox:popover-open {
+    border: 0;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: visible;
   }
 
   .item-name {
