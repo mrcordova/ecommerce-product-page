@@ -10,6 +10,8 @@ const cartMenuListContainer = document.querySelector(
   ".cart-menu-list-container"
 );
 const cartList = document.querySelector(".cart-list");
+const thumbnailBtns = document.querySelectorAll(".thumbnail-container>button");
+let focusdImg = document.getElementById("autofocus");
 
 showSlides(slideIndex);
 
@@ -135,11 +137,21 @@ function addToCart(e) {
   cartAmount.textContent = `${currentItemAmount}`;
   createLiElement();
 }
+
+function changeFocus(e) {
+  focusdImg.removeAttribute("id", "autofocus");
+  e.currentTarget.setAttribute("id", "autofocus");
+  focusdImg = e.currentTarget;
+}
 for (const arrow of arrows) {
   arrow.addEventListener("click", moveSlides);
 }
 
 for (const counterBtn of counterBtns) {
   counterBtn.addEventListener("click", updateCounter);
+}
+
+for (const thumbnailBtn of thumbnailBtns) {
+  thumbnailBtn.addEventListener("click", changeFocus);
 }
 addToCartBtn.addEventListener("click", addToCart);
