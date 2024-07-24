@@ -139,8 +139,16 @@ function addToCart(e) {
 }
 
 function changeFocus(e) {
+  let slides = document.getElementsByClassName("slides");
   focusdImg.removeAttribute("id", "autofocus");
+
+  slides[
+    parseInt(focusdImg.children[0].getAttribute("data-value")) - 1
+  ].classList.add("hide");
   e.currentTarget.setAttribute("id", "autofocus");
+  slides[
+    parseInt(e.currentTarget.children[0].getAttribute("data-value")) - 1
+  ].classList.remove("hide");
   focusdImg = e.currentTarget;
 }
 for (const arrow of arrows) {
